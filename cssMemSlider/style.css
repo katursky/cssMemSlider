@@ -76,7 +76,6 @@ input {
 .titles {
     width: 400%;
     display: flex;
-    flex: 0 0 auto;
     margin: 0;
     transition: all 0.8s ease 0s;
 }
@@ -151,4 +150,54 @@ label:active .labelpoint {
 }
 #slide4:checked ~ .undercont .titles {
   transform: translate(-75%, 0%);
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        width: 400px;
+    }
+
+    .slides {
+        width: 400px;
+        height: 500px;
+    }
+
+    .undercont {
+        flex-direction: column;
+    }
+
+    .titlecont {
+        width: 100%;
+    }
+
+    .controlcont {
+        align-self: center;
+    }
+
+    .controlcont label {
+        width: 30px;
+        height: 30px;
+    }
+
+    .labelpoint {
+        width: 15px;
+        height: 15px;
+        margin-top: 7.5px;
+        margin-left: 7.5px;
+    }
+
+    #slide1:checked ~ .undercont label:nth-of-type(1) .labelpoint,
+    #slide2:checked ~ .undercont label:nth-of-type(2) .labelpoint,
+    #slide3:checked ~ .undercont label:nth-of-type(3) .labelpoint,
+    #slide4:checked ~ .undercont label:nth-of-type(4) .labelpoint {
+        background: rgb(124, 124, 124);;
+        width: 7.5px;
+        height: 7.5px;
+        border: 4px solid rgb(85, 235, 40);;
+    }
 }
