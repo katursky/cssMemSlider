@@ -116,3 +116,39 @@ label:hover .labelpoint {
 label:active .labelpoint {
     transform: scale(0.7);
 }
+
+#slide1:checked ~ .undercont label:nth-of-type(1) .labelpoint,
+#slide2:checked ~ .undercont label:nth-of-type(2) .labelpoint,
+#slide3:checked ~ .undercont label:nth-of-type(3) .labelpoint,
+#slide4:checked ~ .undercont label:nth-of-type(4) .labelpoint {
+  background: rgb(124, 124, 124);;
+  width: 15px;
+  height: 15px;
+  border: 5px solid rgb(85, 235, 40);;
+}
+
+#slide1:checked ~ .slidecont {
+  transform: translate(0%, 0%);
+}
+#slide2:checked ~ .slidecont {
+  transform: translate(-25%, 0%);
+}
+#slide3:checked ~ .slidecont {
+  transform: translate(-50%, 0%);
+}
+#slide4:checked ~ .slidecont {
+  transform: translate(-75%, 0%);
+}
+
+#slide1:checked ~ .undercont .titles {
+  transform: translate(0%, 0%);
+}
+#slide2:checked ~ .undercont .titles {
+  transform: translate(-25%, 0%);
+}
+#slide3:checked ~ .undercont .titles {
+  transform: translate(-50%, 0%);
+}
+#slide4:checked ~ .undercont .titles {
+  transform: translate(-75%, 0%);
+}
